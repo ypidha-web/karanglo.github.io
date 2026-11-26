@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pondok Karanglo | Darul Hikmah Al-Hasan, Tanggul, Jember</title>
+<meta name="description" content="Pondok Karanglo, Yayasan Pendidikan Islam Darul Hikmah Al-Hasan, Tanggul, Jember. Sejak 1910. Ilmu, Ibadah, Istiqomah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0C1D;--sf:#17162B;--ln:#2A2850;--tx:#ECEAFB;--mu:#A5A2C7;--ac:#8B6CFF;--ac2:#E6C36E}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ac2);outline-offset:3px}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:84px 0;position:relative}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin-bottom:12px}
+.lead{color:var(--mu);max-width:58ch;margin-bottom:38px}
+.ar{font-family:'Amiri',serif}
+.btn{display:inline-block;padding:12px 26px;border-radius:8px;font-weight:600;background:var(--ac);color:#fff;border:2px solid var(--ac);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(139,108,255,.45)}
+.btn.o{background:none;border-color:var(--ln);color:var(--tx)}
+.btn.o:hover{border-color:var(--ac);box-shadow:none}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s,box-shadow .3s}
+header.sc{background:rgba(13,12,29,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--ln)}
+.nv{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-weight:700;font-size:1.1rem}.logo b{color:var(--ac)}
+nav ul{display:flex;gap:24px;list-style:none;font-size:.9rem}
+nav a{color:var(--mu);transition:color .2s}nav a:hover{color:#fff}
+#mb{display:none;background:none;border:0;font-size:1.6rem}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:fl 12s ease-in-out infinite}
+.o1{width:340px;height:340px;background:#5b3df0;top:6%;right:-60px}
+.o2{width:260px;height:260px;background:#2a5cff;bottom:4%;left:-60px;animation-delay:-5s;opacity:.35}
+@keyframes fl{50%{transform:translate(-30px,40px) scale(1.12)}}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative}
+.hero .ar{font-size:1.7rem;color:var(--ac2);margin-bottom:6px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.1;margin-bottom:14px}
+.hero h1 span{color:var(--ac)}
+.hero p.sub{color:var(--mu);max-width:46ch;margin-bottom:26px}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.pills span{border:1px solid var(--ln);background:var(--sf);padding:5px 16px;border-radius:99px;font-size:.85rem;font-weight:500}
+.in1>*{opacity:0;transform:translateY(26px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.in1>*:nth-child(2){animation-delay:.12s}.in1>*:nth-child(3){animation-delay:.24s}.in1>*:nth-child(4){animation-delay:.36s}.in1>*:nth-child(5){animation-delay:.48s}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.pt{position:relative;justify-self:center;width:min(100%,360px);animation:up 1s .3s cubic-bezier(.2,.7,.2,1) both}
+.pt::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border-radius:28px;background:linear-gradient(135deg,var(--ac),#3d2bb3);animation:fl 9s ease-in-out infinite}
+.fr{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--sf);border:1px solid var(--ln);display:grid;place-items:center;text-align:center;color:var(--mu);font-size:.85rem;padding:14px}
+.fr img,.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* stats */
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-30px;position:relative;z-index:2}
+.st div{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:22px;text-align:center}
+.st b{display:block;font-size:2.2rem;color:var(--ac2);line-height:1.2}
+.st small{color:var(--mu)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* biografi */
+.bio{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.bio p{color:var(--mu);margin-bottom:14px}.bio p b{color:var(--tx)}
+.tl{position:relative;padding-left:34px}
+.tl::before,.tl i{content:"";position:absolute;left:7px;top:6px;width:3px;border-radius:3px}
+.tl::before{bottom:6px;background:var(--ln)}
+.tl i{height:0;background:linear-gradient(var(--ac),var(--ac2));transition:height .15s}
+.te{position:relative;margin-bottom:22px}
+.te::before{content:"";position:absolute;left:-34px;top:7px;width:17px;height:17px;border-radius:50%;background:var(--bg);border:3px solid var(--ln);transition:.4s}
+.te.in::before{border-color:var(--ac2);background:var(--ac2);box-shadow:0 0 0 6px rgba(230,195,110,.18)}
+.te b{color:var(--ac2)}.te p{color:var(--mu);font-size:.93rem}
+.ws{margin-top:56px;text-align:center;background:linear-gradient(135deg,#1d1a46,#120f2b);border:1px solid var(--ln);border-radius:22px;padding:42px 24px}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 30px}
+.pl div{padding:20px;border-radius:14px;background:rgba(139,108,255,.12);border:1px solid var(--ln)}
+.pl b{display:block;font-size:1.3rem;color:var(--ac2)}.pl span{color:var(--mu);font-size:.88rem}
+blockquote{font-size:1.15rem;max-width:44ch;margin:0 auto 8px;font-style:italic}
+.ws small{color:var(--mu)}
+
+/* pengasuh */
+.es{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:34px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:24px;transition:transform .15s ease-out,border-color .3s}
+.card:hover{border-color:var(--ac)}
+.es .card b{display:block;margin:4px 0}.es .card small,.card p{color:var(--mu);font-size:.9rem}
+.es .card em{font-style:normal;color:var(--ac);font-weight:700;font-size:1.8rem}
+.dm{aspect-ratio:16/7}
+
+/* grid kartu */
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.ch{display:flex;flex-wrap:wrap;gap:9px}
+.ch span{padding:6px 15px;border-radius:99px;font-size:.85rem;border:1px solid var(--ln);background:var(--sf);color:var(--mu);transition:.25s}
+.ch span:hover{border-color:var(--ac);color:#fff;transform:translateY(-2px)}
+h3.sb{margin:30px 0 14px;color:var(--ac2);font-size:1.05rem}
+
+/* jadwal */
+.jd{columns:2;column-gap:36px}
+.jd div{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--ln);break-inside:avoid;font-size:.9rem}
+.jd b{color:var(--ac2);min-width:60px;font-weight:600}.jd span{color:var(--mu)}
+
+/* galeri */
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.fl button{background:var(--sf);border:1px solid var(--ln);border-radius:99px;padding:6px 18px;font-size:.88rem;transition:.25s}
+.fl button.on{background:var(--ac);border-color:var(--ac)}
+.ga{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.g{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid var(--ln);background:linear-gradient(135deg,#221f4d,#14122e);text-align:left;padding:0}
+.g img{transition:transform .6s}
+.g:hover img{transform:scale(1.08)}
+.g span{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 11px;font-size:.82rem;background:linear-gradient(transparent,rgba(5,4,15,.92))}
+.g.x{display:none}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(5,4,15,.94);display:grid;place-items:center;opacity:0;visibility:hidden;transition:.35s;padding:20px}
+#lb.on{opacity:1;visibility:visible}
+#lb figure{max-width:min(94vw,960px);text-align:center;transform:scale(.92);transition:transform .35s}
+#lb.on figure{transform:none}
+#lb img{max-width:100%;max-height:76vh;border-radius:12px}
+#lb figcaption{margin-top:12px;color:var(--mu)}
+#lb button{position:absolute;background:rgba(255,255,255,.1);border:0;border-radius:50%;width:46px;height:46px;font-size:1.4rem;transition:background .2s}
+#lb button:hover{background:var(--ac)}
+#lc{top:18px;right:18px}#lp{left:14px;top:50%}#ln{right:14px;top:50%}
+
+/* biaya */
+.tb{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.tb button{background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:9px 20px;font-weight:500;transition:.25s}
+.tb button.on{background:var(--ac);border-color:var(--ac)}
+.pn{display:none;max-width:640px}.pn.on{display:block;animation:up .5s both}
+.pn div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--ln)}
+.pn div span{color:var(--mu)}.pn div b{color:var(--ac2);text-align:right}
+
+/* kontak */
+.kt{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.kt p{color:var(--mu);margin-bottom:12px}.kt p b{color:var(--tx)}
+.cta{text-align:center;background:linear-gradient(135deg,#2a1f78,#17123f);border:1px solid var(--ln);border-radius:24px;padding:46px 24px}
+.cta p{margin:10px 0 24px}
+footer{border-top:1px solid var(--ln);padding:28px 0;text-align:center;color:var(--mu);font-size:.85rem}
+
+@media(max-width:800px){
+ #mb{display:block}
+ nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);padding:6px 20px 16px;border-bottom:1px solid var(--ln)}
+ nav ul.on{display:flex}nav li a{display:block;padding:10px 0}
+ .hg,.bio,.kt{grid-template-columns:1fr}.pt{order:-1;width:min(70%,280px)}
+ .es,.pl,.st{grid-template-columns:1fr}.jd{columns:1}
+ section{padding:62px 0}.hero{padding-top:96px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before{animation:none!important;transition:none!important}
+ .in1>*,.pt,.rv{opacity:1;transform:none}html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header id="hd"><div class="w nv">
+ <a class="logo" href="#beranda">Pondok <b>Karanglo</b></a>
+ <button id="mb" aria-label="Buka menu" aria-expanded="false">&#9776;</button>
+ <nav aria-label="Menu utama"><ul id="mn">
+  <li><a href="#sejarah">Sejarah</a></li><li><a href="#pendidikan">Pendidikan</a></li>
+  <li><a href="#kegiatan">Kegiatan</a></li><li><a href="#galeri">Galeri</a></li>
+  <li><a href="#biaya">Biaya</a></li><li><a href="#kontak">Kontak</a></li>
+ </ul></nav>
+</div></header>
+
+<main>
+<section class="hero" id="beranda">
+ <div class="orb o1"></div><div class="orb o2"></div>
+ <div class="w hg">
+  <div class="in1">
+   <div class="ar">المعهد الإسلامي دار الحكمة الحسن</div>
+   <h1>Pondok <span>Karanglo</span></h1>
+   <p class="sub">Yayasan Pendidikan Islam Darul Hikmah Al-Hasan. Menimba ilmu dan membina ibadah di Tanggul, Jember, sejak 1910.</p>
+   <div class="pills"><span>Ilmu</span><span>Ibadah</span><span>Istiqomah</span></div>
+   <div><a class="btn" href="#kontak">Daftar santri baru</a> <a class="btn o" href="#sejarah">Baca sejarah</a></div>
+  </div>
+  <div class="pt"><div class="fr"><img src="img/kh-syamsul-huda.jpg" alt="KHR. Syamsul Huda" onerror="this.remove()">Foto KHR. Syamsul Huda<br>(img/kh-syamsul-huda.jpg)</div></div>
+ </div>
+</section>
+
+<div class="w st rv">
+ <div><b data-to="1910">0</b><small>Tahun berdiri</small></div>
+ <div><b data-age="1910">0</b><small>Tahun berkhidmat</small></div>
+ <div><b data-to="5">0</b><small>Unit pendidikan</small></div>
+</div>
+
+<section id="sejarah">
+ <div class="w">
+  <h2 class="rv">Sang Pemuda Tanggul</h2>
+  <p class="lead rv">Kisah KHR. Syamsul Huda, santri yang yatim sejak kecil dan tetap istiqomah menghidupkan pesantren ayahandanya.</p>
+  <div class="bio">
+   <div class="rv">
+    <p><b>KHR. Syamsul Huda</b> adalah putra KHR. Hasan Basri, perintis pesantren Raudhatul Hikmah di Karanglo pada 1910. Beliau kehilangan sang ayah saat berusia sekitar lima tahun.</p>
+    <p>Beliau tidak berhenti belajar. Beliau berguru dari satu pesantren ke pesantren lain, di antaranya Al-Wafa Tempurejo, Al-Hidayat Lasem, dan Fatihul Ulum Manggisan.</p>
+    <p>Sekitar 1970-an beliau kembali ke Karanglo, menghidupkan pesantren peninggalan ayahandanya, berdakwah keliling, dan memadukan pelajaran salaf dengan pendidikan modern. Lahirlah masjid, MTs, dan MA. Beliau wafat pada 2010 dan perjuangannya terus berlanjut.</p>
+   </div>
+   <div class="tl rv" id="tl"><i></i>
+    <div class="te"><b>1910</b><p>KHR. Hasan Basri merintis Raudhatul Hikmah.</p></div>
+    <div class="te"><b>1947</b><p>KHR. Hasan Basri wafat. Syamsul Huda kecil tumbuh yatim.</p></div>
+    <div class="te"><b>1970-an</b><p>Kembali ke Karanglo, menghidupkan pesantren.</p></div>
+    <div class="te"><b>1977</b><p>Berganti nama menjadi Darul Hikmah Al-Hasan.</p></div>
+    <div class="te"><b>1985</b><p>Berhaji, dikenal dengan nama Kiai Syamsul Huda.</p></div>
+    <div class="te"><b>1990-an</b><p>Masjid, gedung MTs, dan asrama putra berdiri.</p></div>
+    <div class="te"><b>2004 dan 2005</b><p>IKSADHA (ikatan alumni) dan MA Al-Hasan berdiri.</p></div>
+    <div class="te"><b>2010</b><p>KHR. Syamsul Huda wafat.</p></div>
+    <div class="te"><b>2022</b><p>MTs Darul Hikmah Al-Hasan berdiri kembali, akreditasi A.</p></div>
+   </div>
+  </div>
+  <div class="ws rv">
+   <h3>Trilogi Pondok Karanglo</h3>
+   <div class="pl">
+    <div><b>Ilmu</b><span>Bekal untuk mengetahui dan memahami</span></div>
+    <div><b>Ibadah</b><span>Pengamalan dari ilmu</span></div>
+    <div><b>Istiqomah</b><span>Penjaga ilmu dan ibadah</span></div>
+   </div>
+   <blockquote>“Jangan tinggalkan 3 perkara yaitu sholat berjamaah, hatamkan Al-Qur’an, perbanyak membaca sholawat.”</blockquote>
+   <small>Wasiat KHR. Syamsul Huda kepada para santri</small>
+  </div>
+ </div>
+</section>
+
+<section id="pengasuh" style="padding-top:0">
+ <div class="w">
+  <h2 class="rv">Estafet kepengasuhan</h2>
+  <p class="lead rv">Dari perintis hingga pengasuh saat ini.</p>
+  <div class="es">
+   <div class="card tilt rv"><em>1</em><b>KHR. Hasan Basri</b><small>Perintis pesantren, 1910</small></div>
+   <div class="card tilt rv" style="--d:.1s"><em>2</em><b>KHR. Syamsul Huda</b><small>Pengasuh yang mengembangkan pesantren</small></div>
+   <div class="card tilt rv" style="--d:.2s"><em>3</em><b>KHR. Umar Saifuddin, M.M</b><small>Pengasuh PP DHA Karanglo</small></div>
+  </div>
+  <div class="fr dm rv"><img src="img/dewan-masyayikh.jpg" alt="Dewan Masyayikh" onerror="this.remove()">Dewan Masyayikh<br>(img/dewan-masyayikh.jpg)</div>
+ </div>
+</section>
+
+<section id="pendidikan" style="background:#100f24">
+ <div class="w">
+  <h2 class="rv">Unit pendidikan</h2>
+  <p class="lead rv">Dari usia dini sampai perguruan tinggi, dalam satu lingkungan pesantren.</p>
+  <div class="gr">
+   <div class="card tilt rv"><h3>Raudhatul Athfal An-Najah</h3><p>Pendidikan anak usia dini.</p></div>
+   <div class="card tilt rv" style="--d:.08s"><h3>Taman Kanak-Kanak Miftahul Hasan</h3><p>Taman kanak-kanak.</p></div>
+   <div class="card tilt rv" style="--d:.16s"><h3>MTs Darul Hikmah Al-Hasan</h3><p>Madrasah Tsanawiyah, akreditasi A.</p></div>
+   <div class="card tilt rv" style="--d:.24s"><h3>MA Al-Hasan</h3><p>Madrasah Aliyah, berdiri 2005.</p></div>
+   <div class="card tilt rv" style="--d:.32s"><h3>Sekolah Tinggi / Ma’had Aly</h3><p>Program rintisan.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="kegiatan">
+ <div class="w">
+  <h2 class="rv">Kegiatan santri</h2>
+  <p class="lead rv">Hari santri diisi ibadah, kajian, sekolah, dan pembinaan.</p>
+  <h3 class="sb rv">Program pesantren</h3>
+  <div class="ch rv">
+   <span>Kajian kitab kuning</span><span>Madrasah diniyah</span><span>Muhafadzoh mandzumat</span><span>Tahfidzul Qur’an</span><span>Takhtimul Qur’an bin nadzor</span><span>TPQ</span><span>Majelis khitobah</span><span>Maulid Diba’</span><span>Majelis Burdah Imam Busyiri</span><span>Takhossus Al-Miftah</span><span>Hadroh</span><span>Multimedia Karanglo</span>
+  </div>
+  <h3 class="sb rv">Agenda tahunan dan kemasyarakatan</h3>
+  <div class="ch rv">
+   <span>Safari Maulid 41 Malam</span><span>Haul Majemuk</span><span>Ziarah tahunan</span><span>Penyembelihan hewan qurban</span><span>Wisuda</span><span>Jam’iyah Muslimat</span><span>Jam’iyah Istighosah Manaqib</span><span>IKSADHA</span><span>MASDHA</span><span>UPZISDHA</span><span>MARODHA</span>
+  </div>
+  <h3 class="sb rv">Jadwal harian</h3>
+  <div class="jd rv">
+   <div><b>04.00</b><span>Qiyamullail</span></div>
+   <div><b>04.30</b><span>Sholat Subuh berjamaah</span></div>
+   <div><b>05.00</b><span>Muhafadzoh mandzumat</span></div>
+   <div><b>05.30</b><span>Ngaji kitab</span></div>
+   <div><b>06.00</b><span>Piket pagi, persiapan sekolah</span></div>
+   <div><b>07.00</b><span>Sholat Dhuha berjamaah</span></div>
+   <div><b>07.30</b><span>Ngaji Yanbu’a / program takhossus</span></div>
+   <div><b>08.00</b><span>Sekolah formal</span></div>
+   <div><b>12.30</b><span>Sholat Dzuhur berjamaah</span></div>
+   <div><b>13.30</b><span>Madrasah diniyah</span></div>
+   <div><b>15.30</b><span>Sholat Ashar berjamaah</span></div>
+   <div><b>16.00</b><span>Wirid/hizib, piket</span></div>
+   <div><b>16.30</b><span>Istirahat dan olahraga</span></div>
+   <div><b>17.15</b><span>Sholat Maghrib berjamaah</span></div>
+   <div><b>18.00</b><span>Ngaji Qur’an, Maulid Diba’ (malam Selasa), Tahlil (malam Jumat)</span></div>
+   <div><b>19.00</b><span>Sholat Isya berjamaah, kajian kitab Bidayatul Hidayah</span></div>
+   <div><b>20.00</b><span>Extra pesantren</span></div>
+   <div><b>21.00</b><span>Private dan musyawarah</span></div>
+   <div><b>22.00</b><span>Istirahat malam</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="galeri" style="background:#100f24">
+ <div class="w">
+  <h2 class="rv">Galeri</h2>
+  <p class="lead rv">Klik foto untuk melihat lebih besar.</p>
+  <div class="fl rv" id="fl"></div>
+  <div class="ga" id="ga"></div>
+ </div>
+</section>
+
+<section id="biaya">
+ <div class="w">
+  <h2 class="rv">Biaya pendidikan 2027</h2>
+  <p class="lead rv">Rincian biaya tahun ajaran 2027.</p>
+  <div class="tb rv" id="tb">
+   <button class="on" data-t="0">Pondok</button><button data-t="1">MTs</button><button data-t="2">MA</button><button data-t="3">Taman Kanak-Kanak</button>
+  </div>
+  <div class="pn on">
+   <div><span>Pendaftaran santri baru</span><b>Rp 100.000</b></div>
+   <div><span>Syahriyah</span><b>Rp 45.000/bulan</b></div>
+   <div><span>Makan 2x sehari</span><b>Rp 260.000/bulan</b></div>
+   <div><span>Kitab santri baru</span><b>Rp 150.000/awal tahun ajaran</b></div>
+   <div><span>Haflah Akhirussanah</span><b>Rp 500.000/akhir tahun ajaran</b></div>
+   <div><span>Takhtimul Qur’an bin nadzor</span><b>Rp 100.000/lulusan</b></div>
+  </div>
+  <div class="pn">
+   <div><span>Pendaftaran</span><b>Gratis</b></div>
+   <div><span>Uang gedung</span><b>Gratis</b></div>
+   <div><span>Uang bulanan</span><b>Gratis</b></div>
+   <div><span>Doorprize</span><b>Untuk 40 pendaftar pertama</b></div>
+  </div>
+  <div class="pn">
+   <div><span>Pendaftaran</span><b>Gratis</b></div>
+   <div><span>Uang gedung</span><b>Gratis</b></div>
+   <div><span>Uang bulanan</span><b>Gratis</b></div>
+   <div><span>Ujian semester</span><b>Rp 60.000/semester</b></div>
+  </div>
+  <div class="pn">
+   <div><span>Uang pendaftaran</span><b>Gratis</b></div>
+   <div><span>Buku paket semester 1</span><b>Gratis</b></div>
+   <div><span>Seragam dan perlengkapan alat tulis</span><b>Rp 600.000</b></div>
+   <div><span>Infaq</span><b>Rp 25.000/bulan</b></div>
+  </div>
+ </div>
+</section>
+
+<section id="kontak" style="padding-top:20px">
+ <div class="w">
+  <div class="kt rv">
+   <div>
+    <h2>Kunjungi dan daftar</h2>
+    <p><b>Alamat</b><br>Jl. KH. Hasan Basri No. 01 Karanglo, Tanggul Wetan, Tanggul, Jember, Jawa Timur</p>
+    <p><b>WhatsApp panitia</b><br>[08xx-xxxx-xxxx]</p>
+    <a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Pondok+Karanglo+Tanggul+Jember" target="_blank" rel="noopener">Buka di Google Maps</a>
+   </div>
+   <div class="cta">
+    <h3>Pendaftaran santri baru 2027</h3>
+    <p>Tanyakan syarat dan jadwal langsung ke panitia.</p>
+    <a class="btn" href="https://wa.me/628XXXXXXXXXX?text=Assalamu%E2%80%99alaikum%2C%20saya%20ingin%20bertanya%20tentang%20pendaftaran%20santri%20baru%202027." target="_blank" rel="noopener">Chat WhatsApp</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="w">&copy; <span id="yr">2026</span> Pondok Karanglo, Yayasan Pendidikan Islam Darul Hikmah Al-Hasan.</div></footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Tampilan foto">
+ <button id="lc" aria-label="Tutup">&times;</button><button id="lp" aria-label="Sebelumnya">&#8249;</button><button id="ln" aria-label="Berikutnya">&#8250;</button>
+ <figure><img id="li" alt=""><figcaption id="lt"></figcaption></figure>
+</div>
+
+<script>
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+$('#yr').textContent=new Date().getFullYear();
+
+/* menu */
+var hd=$('#hd'),mb=$('#mb'),mn=$('#mn');
+mb.onclick=function(){var o=mn.classList.toggle('on');mb.setAttribute('aria-expanded',o)};
+mn.onclick=function(e){if(e.target.tagName==='A'){mn.classList.remove('on')}};
+
+/* daftar foto galeri: [nama file di folder img/galeri/, keterangan, kategori] */
+var P=[
+['pondok-udara.jpg','Foto udara pondok','Pondok'],['masjid.jpg','Masjid pondok','Pondok'],['gedung-mts.jpg','Gedung MTs','Pondok'],['balai-kesehatan.jpg','Balai kesehatan','Pondok'],
+['safari-maulid.jpg','Safari Maulid 41 Malam ke-7','Kegiatan'],['haul-majemuk.jpg','Haul Majemuk ke-16','Kegiatan'],['qurban.jpg','Penyembelihan hewan qurban','Kegiatan'],['ziarah.jpg','Ziarah tahunan','Kegiatan'],
+['dhuha.jpg','Sholat Dhuha berjamaah','Kegiatan'],['pramuka.jpg','Kegiatan pramuka','Kegiatan'],['kajian-putra.jpg','Kajian kitab kuning santri putra','Kegiatan'],['kajian-putri.jpg','Kajian kitab kuning santri putri','Kegiatan'],
+['wisuda-tk.jpg','Wisuda TK','Wisuda'],['wisuda-mts.jpg','Wisuda MTs','Wisuda'],['wisuda-ma.jpg','Wisuda MA','Wisuda'],['khotmil-quran.jpg','Khotmil Qur’an bin nadzor','Wisuda'],
+['tokoh-1.jpg','KHR. Syamsul Huda bersama RKH. Mahfudz Abd. Hannan','Tokoh'],['tokoh-2.jpg','KHR. Umar Saifuddin bersama para kiai','Tokoh']
+];
+var ga=$('#ga'),fl=$('#fl'),cur=0;
+P.forEach(function(p,i){
+ var b=document.createElement('button');b.className='g rv';b.dataset.c=p[2];b.dataset.i=i;b.style.setProperty('--d',(i%6)*.06+'s');
+ b.innerHTML='<img loading="lazy" src="img/galeri/'+p[0]+'" alt="'+p[1]+'"><span>'+p[1]+'</span>';
+ b.firstChild.onerror=function(){this.remove()};ga.appendChild(b);
+});
+['Semua','Pondok','Kegiatan','Wisuda','Tokoh'].forEach(function(c,i){
+ var b=document.createElement('button');b.textContent=c;if(!i)b.className='on';
+ b.onclick=function(){$$('button',fl).forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+  $$('.g').forEach(function(g){g.classList.toggle('x',c!=='Semua'&&g.dataset.c!==c)})};
+ fl.appendChild(b);
+});
+var lb=$('#lb'),li=$('#li');
+function show(i){cur=i;li.style.display='';li.src='img/galeri/'+P[i][0];li.onerror=function(){li.style.display='none'};$('#lt').textContent=P[i][1]}
+function step(d){var v=$$('.g:not(.x)').map(function(g){return +g.dataset.i}),k=v.indexOf(cur);show(v[(k+d+v.length)%v.length])}
+ga.onclick=function(e){var g=e.target.closest('.g');if(!g)return;show(+g.dataset.i);lb.classList.add('on')};
+$('#lc').onclick=function(){lb.classList.remove('on')};
+$('#lp').onclick=function(){step(-1)};$('#ln').onclick=function(){step(1)};
+lb.onclick=function(e){if(e.target===lb)lb.classList.remove('on')};
+document.onkeydown=function(e){if(!lb.classList.contains('on'))return;
+ if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)};
+
+/* tab biaya */
+$$('#tb button').forEach(function(b){b.onclick=function(){
+ $$('#tb button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+ $$('.pn').forEach(function(p,i){p.classList.toggle('on',i==b.dataset.t)})}});
+
+/* muncul saat scroll + hitung angka */
+function count(el){var to=el.dataset.age?new Date().getFullYear()-el.dataset.age:+el.dataset.to,t0=null;
+ (function f(t){t0=t0||t;var k=Math.min((t-t0)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(performance.now())}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+ e.target.classList.add('in');$$('[data-to],[data-age]',e.target).forEach(count);io.unobserve(e.target)})},{threshold:.15});
+$$('.rv,.te').forEach(function(el){io.observe(el)});
+
+/* garis waktu dan header */
+var tl=$('#tl'),bar=$('i',tl);
+function onS(){hd.classList.toggle('sc',scrollY>30);
+ var r=tl.getBoundingClientRect(),p=(innerHeight*.6-r.top)/r.height;bar.style.height=Math.max(0,Math.min(1,p))*(r.height-12)+'px'}
+addEventListener('scroll',onS,{passive:true});onS();
+
+/* kartu miring mengikuti kursor */
+if(matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+ $$('.tilt').forEach(function(c){
+  c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+   c.classList.add('in');c.style.transition='transform .1s';c.style.transform='perspective(700px) rotateY('+x*10+'deg) rotateX('+(-y*10)+'deg) translateY(-4px)'});
+  c.addEventListener('mouseleave',function(){c.style.transition='transform .5s';c.style.transform=''});
+ });
+}
+</script>
+</body>
+</html>
